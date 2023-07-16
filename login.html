@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Sign In/Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/afa2a6978b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Sign up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <p>Forgot password <a href="#">Click Here!</a></p>
+            </div>
+            <div class="btwn-field">
+                <button type="button" id="signupbtwn">Sign up</button>
+                <button type="button" class="disable" id="signinbtwn">Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    let signupbtwn = document.getElementById("signupbtwn");
+    let signinbtwn = document.getElementById("signinbtwn");
+    let nameField = document.getElementById("nameField");
+    let title = document.getElementById("title");
+
+signinbtwn.onclick = function(){
+    nameField.style.maxHeight = "0";
+    title.innerHTML = "Sign in";
+    signupbtwn.classList.add("disable");
+    signinbtwn.classList.remove("disable");
+}
+signupbtwn.onclick = function(){
+    nameField.style.maxHeight = "60px";
+    title.innerHTML = "Sign up";
+    signupbtwn.classList.remove("disable");
+    signinbtwn.classList.add("disable");
+}
+
+</script>
+</body>
+</hmtl>
